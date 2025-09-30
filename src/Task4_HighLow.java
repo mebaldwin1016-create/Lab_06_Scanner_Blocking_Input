@@ -14,5 +14,15 @@ public class Task4_HighLow {
         String newLine = "";
         String trash = "";
 
+        do {
+
+
+
+
+
+
+        }
+        while (!done);
+
     }
 }
