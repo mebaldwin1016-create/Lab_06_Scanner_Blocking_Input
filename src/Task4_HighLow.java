@@ -9,7 +9,7 @@ public class Task4_HighLow {
         boolean done = false;
 
         int numToGuess = rnd.nextInt(10) + 1;// 0-9 + 1 -> 1-10
-        int guess 0;
+        int guess = 0;
 
         String newLine = "";
         String trash = "";
