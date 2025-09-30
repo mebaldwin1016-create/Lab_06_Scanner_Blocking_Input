@@ -36,6 +36,16 @@ public class Task4_HighorLow {
                         System.out.println(trash + " is not a valid value.");
                         done = false;
                     }
+                    if (guess==numToGuess) {
+                        System.out.println("Correct Guess");
+                    } else {
+                        System.out.println("Too High");
+                    }
+                    if (guess==numToGuess) {
+                        System.out.println("Correct Guess");
+                    } else {
+                        System.out.println("Too Low");
+                    }
                 } while (!done);
             }
             else
