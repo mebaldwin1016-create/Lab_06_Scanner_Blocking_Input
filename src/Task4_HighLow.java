@@ -15,12 +15,24 @@ public class Task4_HighLow {
         String trash = "";
 
         do {
+            System.out.println("Try to guess a number (1-10) in one try: ");
+            if (in.hasNextInt()) {
+                guess = in.nextInt();
+                newLine = in.nextLine();
+                done = true;
 
-
-
-
-
-
+                if (guess == numToGuess) {
+                    System.out.println("Excellent you guessed my number: " + numToGuess);
+                } else if (guess < numToGuess) {
+                    System.out.println("No. That is lower than my number: " + numToGuess);
+                } else {
+                    System.out.println("No. That is higher than my number: " + numToGuess);
+                }
+            } else {
+                trash = in.nextLine();
+                System.out.println("You must enter a number");
+                done = false;
+            }
         }
         while (!done);
 
