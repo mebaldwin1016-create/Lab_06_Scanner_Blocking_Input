@@ -15,18 +15,34 @@ public class Task4_HighorLow {
         String trash = "";
 
         do {
-
-            System.out.println("Enter a number");
+            System.out.println("Try to guess a number (1-10) in one try: ");
             if (in.hasNextInt())
             {
                 numToGuess = rnd.nextInt();
-                in.nextLine();
+                newLine = in.nextLine();
                 done = true;
+
+                do {
+                    System.out.println(guess==numToGuess);
+                    if (in.hasNextInt()) {
+                        guess = in.nextInt();
+                        newLine = in.nextLine();
+                        System.out.println("You guessed: " + guess);
+                        System.out.println("The number was: " + numToGuess);
+                        done = true;
+
+                    } else {
+                        trash = in.nextLine();
+                        System.out.println(trash + " is not a valid value.");
+                        done = false;
+                    }
+                } while (!done);
             }
             else
             {
                 trash = in.nextLine();
-
+                System.out.println(trash + " is not a valid value.");
+                done = false;
             }
         }while(!done);
 
